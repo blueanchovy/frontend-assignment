@@ -132,7 +132,8 @@ const App = () => {
         >
           Previous
         </button>
-        <div className="flex space-x-2">
+
+        {/* <div className="flex space-x-2">
           {Array.from(
             { length: pageButtonsRange.end - pageButtonsRange.start + 1 },
             (_, i) => (
@@ -149,7 +150,15 @@ const App = () => {
               </button>
             )
           )}
+        </div> */}
+
+        {/* page x of totalpages */}
+        <div className="flex items-center space-x-2">
+          <span>
+            Page {currentPage} of {numberOfPages}
+          </span>
         </div>
+
         <button
           disabled={currentPage === numberOfPages}
           onClick={handleNextPage}
